@@ -96,14 +96,21 @@ p{
 ---------------------------------*/
 
 .header{
-	text-align:center;
-	background:url(../img/pw_maze_black_2X.png) left top repeat;
+	text-align:center;	
+	/*background:url(../img/dark_geometric.png) left top repeat;*/
+	background:url(../img/shattered-island.gif) left top repeat;
+	/*background:url(../img/chalkboard.jpg) left top repeat;*/
 	padding:280px 0;
 }
 .logo{
-	width:130px;
+	height:130px;
 	margin:0 auto 35px;
 }
+
+.logo img{
+	height:160px;
+}
+
 .header h1{
 	font-family: 'Montserrat',sans-serif;
 	font-size:50px;
@@ -784,7 +791,8 @@ border: 2px solid #fff;
 ---------------------------------*/
 
 .footer{
-	background:url(../img/pw_maze_black_2X.png) left top repeat;
+	background:url(../img/shattered-island.gif) left top repeat;
+	/*background:url(../img/chalkboard.jpg) left top repeat;*/
 	padding:35px 0 35px;
 }
 .footer-logo{
