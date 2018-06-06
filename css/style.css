@@ -103,12 +103,12 @@ p{
 	padding:280px 0;
 }
 .logo{
-	height:130px;
+	width:160px;
 	margin:0 auto 35px;
 }
 
 .logo img{
-	height:160px;
+	width:160px;
 }
 
 .header h1{
@@ -189,30 +189,35 @@ color: #fff;
 }
 .main-nav{
 	text-align:center;
-	margin:10px 0 0px;
+	padding:10px 0 0px;
 	padding:0;
 	list-style:none;
 }
 .main-nav li{
 	display:inline;
+	height: 60px;
 	margin:0 1px;
 }
+
 .main-nav li a{
+	width: 120px;
 	display:inline-block;
 	color:#222222;
 	text-transform:uppercase;
 	font-family: 'Montserrat', sans-serif;
 	text-decoration: none;
-	line-height:20px;
-	margin:17px 32px;
+	line-height:60px;
+	/*padding:17px 32px;*/
 	transition:all 0.3s ease-in-out;
 	-moz-transition:all 0.3s ease-in-out;
 	-webkit-transition:all 0.3s ease-in-out;
+	border-bottom:2px solid #ffffff;
 }
 
 .main-nav li a:hover{ 
 	text-decoration:none;
 	color: #7cc576;
+	border-bottom:2px solid #222222;
 }
 
 .small-logo{ 
