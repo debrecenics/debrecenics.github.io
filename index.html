@@ -9,6 +9,7 @@
 	<link rel="icon" href="favicon.png" type="image/png">
 	<link rel="shortcut icon" href="favicon.ico" type="img/x-icon">
 
+	<link href="https://fonts.googleapis.com/css?family=Fira+Mono|Nova+Mono" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,800italic,700italic,600italic,400italic,300italic,800,700,600' rel='stylesheet' type='text/css'>
 
@@ -51,6 +52,60 @@
 		$( "#14_ttc_bib" ).tabs();
 		$( "#14_vao_bib" ).tabs();
 	} );
+	
+	//Span characters
+	$( function() {
+		animateCharactersToSpan();
+		animateCharactersInterval();
+		
+	} );
+	
+	function animateCharactersOf(vowel) {
+		var text = $('.tech-letter');
+			text.each(function() {
+				var $letterSpan = $(this);
+				if( $letterSpan.text() == vowel) {
+					var counter = 1;
+					var characters = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+					var characters = characters.concat(vowel);
+					for (i = 0; i < characters.length; i++) {
+						var letter = characters.substr(i, 1);
+						animateCharactersSet($letterSpan, letter, ++counter);
+					}
+				}
+			});
+	}
+	
+	function animateCharactersInterval() {
+		setInterval(function() {
+			var specialLetters = ["A", "E", "Y", "S", "H"]
+			var rnd = Math.floor(Math.random()*specialLetters.length)
+			var specialLetter = specialLetters[rnd]
+			animateCharactersOf(specialLetter)
+		}, 10000)
+	}
+	
+	function animateCharactersSet(letterSpan, letter, counter) {
+		setTimeout(function() {
+			letterSpan.text(letter);
+		}, 35 * counter)
+	}
+	
+	function animateCharactersToSpan() {
+		var $text = $('.tech');
+	    var newContent = '';
+
+		for (i = 0; i < $text.text().length; i++) {
+		  var letter = $text.text().substr(i, 1);
+
+		  if (letter != " ") {
+			newContent += '<span class="tech-letter">' + letter + '</span>';
+		  } else {
+			newContent += letter;
+		  } 
+		}
+		$text.html(newContent);
+	}	
   </script>
 	
 	<!-- =======================================================
@@ -72,7 +127,7 @@
 			</figure>
 			<h1 class="animated fadeInDown delay-07s">Hi! I'm Csaba Debreceni</h1>
 			<ul class="we-create animated fadeInUp delay-1s">
-				<li>PhD Researcher at MTA-BME LENDÜLET CYBER-PHYSICAL SYSTEMS RESEARCH GROUP, Hungary</li>
+				<li class="tech">PHD RESEARCHER AT MTA-BME LENDÜLET CYBER-PHYSICAL SYSTEMS RESEARCH GROUP, HUNGARY</li>
 			</ul>
 			<a class="link animated fadeInUp delay-1s servicelink" href="#cv">Go to Details</a>
 		</div>
@@ -920,26 +975,6 @@
 		</div>
 	</footer>
 
-	<script type="text/javascript">
-		var slideIndex = 1;
-		showDivs(slideIndex);
-
-		function plusDivs(n) {
-		  showDivs(slideIndex += n);
-		}
-
-		function showDivs(n) {
-		  var i;
-		  var x = document.getElementsByClassName("mySlides");
-		  if (n > x.length) {slideIndex = 1}    
-		  if (n < 1) {slideIndex = x.length}
-		  for (i = 0; i < x.length; i++) {
-			 x[i].style.display = "none";  
-		  }
-		  x[slideIndex-1].style.display = "block";  
-		}
-	</script>
-	
 	<script type="text/javascript">
 		$(document).ready(function(e) {
 			$('#test').scrollToFixed();

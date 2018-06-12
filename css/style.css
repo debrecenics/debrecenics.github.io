@@ -100,15 +100,15 @@ p{
 	/*background:url(../img/dark_geometric.png) left top repeat;*/
 	background:url(../img/shattered-island.gif) left top repeat;
 	/*background:url(../img/chalkboard.jpg) left top repeat;*/
-	padding:280px 0;
+	padding:238px 0;
 }
 .logo{
-	width:160px;
+	width:200px;
 	margin:0 auto 35px;
 }
 
 .logo img{
-	width:160px;
+	width:200px;
 }
 
 .header h1{
@@ -129,10 +129,10 @@ p{
 }
 .we-create li{
 	display:inline-block;
-	font-family: 'Montserrat',sans-serif;
+	font-family: 'Fira Mono', monospace;
 	font-size:14px;
 	color: #bcbcbc;
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
 	font-weight: 400;
 	margin:0 5px 0 0;
 	padding:0 0 0 15px;
@@ -225,7 +225,7 @@ color: #fff;
 }
 
 .main-section{
-	padding:90px 0 110px;
+	padding:40px 0 110px;
 }
 
 
@@ -847,6 +847,11 @@ border: 2px solid #fff;
 	max-width: 1140px;
 }
 
+
+.tech-arrow {
+	font-family: 'FontAwesome';
+	padding-bottom: 5px;
+}
 
 /* Animation Timers
 ---------------------------------*/
