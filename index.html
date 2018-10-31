@@ -55,7 +55,8 @@
 	
 	//Span characters
 	$( function() {
-		animateCharactersToSpan();
+		animateCharactersToSpan('tech-iql');
+		animateCharactersToSpan('tech-phd');
 		animateCharactersInterval();
 		
 	} );
@@ -91,12 +92,12 @@
 		}, 35 * counter)
 	}
 	
-	function animateCharactersToSpan() {
-		var $text = $('.tech');
-	    var newContent = '';
+	function animateCharactersToSpan(className) {
+		var text = $('#' + className)
+		var newContent = '';
 
-		for (i = 0; i < $text.text().length; i++) {
-		  var letter = $text.text().substr(i, 1);
+		for (i = 0; i <  text.text().length; i++) {
+		  var letter =  text.text().substr(i, 1);
 
 		  if (letter != " ") {
 			newContent += '<span class="tech-letter">' + letter + '</span>';
@@ -104,7 +105,7 @@
 			newContent += letter;
 		  } 
 		}
-		$text.html(newContent);
+		text.html(newContent);
 	}	
   </script>
 	
@@ -123,11 +124,14 @@
 		<!--header-start-->
 		<div class="container">
 			<figure class="logo animated fadeInDown delay-07s">
-				<a href="#"><img src="img/logo-3.png" alt=""></a>
+				<a href="#"><img src="img/logo-5.png" alt=""></a>
 			</figure>
 			<h1 class="animated fadeInDown delay-07s">Hi! I'm Csaba Debreceni</h1>
-			<ul class="we-create animated fadeInUp delay-1s">
-				<li class="tech">PHD RESEARCHER AT MTA-BME LENDÜLET CYBER-PHYSICAL SYSTEMS RESEARCH GROUP, HUNGARY</li>
+			<ul class="we-create-1 animated fadeInUp delay-1s">
+				<li id="tech-iql">RESEARCHER AT INCQUERY LABS LTD, HUNGARY</li>
+			</ul>
+			<ul class="we-create-2 animated fadeInUp delay-1s">
+				<li id="tech-phd">PHD CANDIDATE AT BUDAPEST UNIVERSITY OF TECHNOLOGIES AND ECONOMICS, HUNGARY</li>
 			</ul>
 			<a class="link animated fadeInUp delay-1s servicelink" href="#cv">Go to Details</a>
 		</div>
@@ -922,7 +926,7 @@
 	<!--main-section-end-->
 
 
-	<section class="business-talking">
+	<section class="business-talking" id="contact">
 		<!--business-talking-start-->
 		<div class="container">
 			<h2>Contact me anytime.</h2>
@@ -930,7 +934,7 @@
 	</section>
 	<!--business-talking-end-->
 	<div class="container">
-		<section class="main-section contact" id="contact">
+		<section class="main-section contact">
 
 			<div class="row">
 				<div class="col-lg-6 col-sm-7 wow fadeInLeft">

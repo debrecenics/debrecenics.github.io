@@ -120,14 +120,20 @@ p{
 	color:#fff;
 }
 
-.we-create{
+.we-create-1{
 	padding:0;
-	margin:35px 0 55px;
+	margin:35px 0 0px;
 }
+
+.we-create-2{
+	padding:0;
+	margin:0px 0 55px;
+}
+
 .wp-pic{
 	margin-bottom:20px;
 }
-.we-create li{
+.we-create-1 li{
 	display:inline-block;
 	font-family: 'Fira Mono', monospace;
 	font-size:14px;
@@ -137,7 +143,21 @@ p{
 	margin:0 5px 0 0;
 	padding:0 0 0 15px;
 }
-.we-create li:first-child{
+.we-create-1 li:first-child{
+	background:none;
+}
+
+.we-create-2 li{
+	display:inline-block;
+	font-family: 'Fira Mono', monospace;
+	font-size:14px;
+	color: #bcbcbc;
+	/*text-transform: uppercase;*/
+	font-weight: 400;
+	margin:0 5px 0 0;
+	padding:0 0 0 15px;
+}
+.we-create-2 li:first-child{
 	background:none;
 }
 
